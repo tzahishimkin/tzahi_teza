@@ -1,0 +1,9 @@
+sentence-transformers
+scikit-learn
+fastapi
+uvicorn
+numpy
+pandas
+joblib
+onnxruntime
+rich

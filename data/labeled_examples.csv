@@ -1,0 +1,88 @@
+url,snippet,label
+https://news.example.com/style1,Street‑style roundup: bold clogs steal the show at NYC Fashion Week…,1
+https://fashion.example.com/crocs-nurses,Nurses rave about lightweight Crocs that survive 12‑hour shifts without foot pain…,1
+https://tech.example.org/review42,Review: new noise‑cancelling earphones boast 40‑hour battery life…,0
+https://food.example.net/chefblog,Chef Maria shares why she swapped heavy kitchen clogs for colourful Crocs…,1
+https://travel.example.com/top‑hikes,Top 5 hikes for beginners in the Swiss Alps—gear tips included…,0
+https://worklife.example.io/ergonomics,Office ergonomics: why standing desks improve productivity…,1
+https://sports.example.com/running‑tips,10 tips to run your first 10 K without injury…,0
+https://fashion.example.org/fall‑footwear,Fall footwear trends: platform clogs and colourful mules are back…,1
+https://finance.example.net/retirement‑401k,How compound interest grows your 401(k) faster than you think…,0
+https://health.example.com/mental‑wellness,Mindfulness apps compared: which one actually lowers stress?,1
+https://gaming.example.io/review‑sandbox,Sandbox survival game adds dynamic weather and building physics…,0
+https://hospitality.example.com/kitchen‑gear,Slip‑resistant footwear matters—why many chefs swear by Crocs clogs…,1
+https://design.example.org/creative‑spaces,Creative studios embrace comfort: Crocs spotted in agency brainstorms…,1
+https://edu.example.edu/campus‑fashion,Campus style: students customise Crocs with glow‑in‑the‑dark charms…,1
+https://auto.example.net/electric‑car,New electric SUV promises 600‑km range on single charge…,0
+https://style.example.com/rainy‑day‑shoes,Stay dry: waterproof clogs and rain boots reviewed…,1
+https://tech.example.org/gadget‑news,"Foldable phone shipments to triple next year, analysts say…",0
+https://health.example.com/ortho‑footwear,Orthopedic experts weigh in on arch support in modern casual shoes…,1
+https://lifestyle.example.org/gardening‑tips,Best shoes for muddy gardening sessions—Crocs vs traditional boots…,1
+https://finance.example.com/crypto‑basics,What beginners miss about crypto staking incentives…,0
+https://wildlife.example.net/crocs‑australia,"Australian saltwater crocodiles threaten tourist boats, rangers warn…",0
+https://outdoor.example.com/hiking‑prep,Essential footwear for day hikers: comfort vs protection trade-offs…,1
+https://medical.example.org/nurse‑wellness,How healthcare workers can reduce foot fatigue during long shifts…,1
+https://culinary.example.net/kitchen‑safety,Restaurant kitchen safety: non-slip surfaces and proper footwear…,1
+https://workspace.example.com/standing‑desk,Ergonomic office setups: standing mats and supportive shoes…,1
+https://retail.example.org/customer‑service,Retail workers share tips for staying comfortable during busy shifts…,1
+https://gardening.example.io/muddy‑season,Spring gardening: waterproof gear for wet conditions…,1
+https://college.example.edu/dorm‑essentials,Student life: comfortable footwear for campus walks…,1
+https://wellness.example.com/workplace‑comfort,Office wellness: simple changes to reduce physical strain…,1
+https://fashion.example.net/comfort‑style,Balancing comfort and style in professional environments…,1
+https://hospitality.example.org/staff‑uniform,Hotel staff uniform guidelines: comfort meets professionalism…,1
+https://daycare.example.com/teacher‑gear,Preschool teachers recommend easy-clean comfortable shoes…,1
+https://art.example.org/studio‑setup,Artist studio essentials: flooring and footwear for long sessions…,1
+https://vet.example.net/clinic‑wear,Veterinary professionals discuss slip-resistant footwear options…,1
+https://elderly.example.com/comfort‑shoes,Senior-friendly footwear: easy-on options with good support…,1
+https://kids.example.org/playground‑safety,Child-safe playground footwear: grip and protection priorities…,1
+https://therapy.example.net/physical‑comfort,Physical therapists recommend supportive shoes for recovery…,1
+https://cleaning.example.com/janitorial‑gear,Professional cleaning: waterproof shoes for wet environments…,1
+https://pharmacy.example.org/staff‑comfort,Pharmacists share foot-care tips for standing all day…,1
+https://library.example.edu/worker‑wellness,Library staff wellness: comfortable shoes for busy shelving days…,1
+https://dental.example.net/practice‑gear,Dental hygienists recommend easy-clean professional footwear…,1
+https://warehouse.example.com/safety‑first,Warehouse workers prioritize comfort in steel-toe alternatives…,1
+https://food.example.org/service‑industry,Restaurant servers share shoe recommendations for long shifts…,1
+https://camp.example.net/counselor‑prep,Summer camp counselors pack waterproof easy-clean footwear…,1
+https://salon.example.com/stylist‑comfort,Hair stylists discuss ergonomic footwear for standing professionals…,1
+https://lab.example.org/research‑safety,Lab technicians choose chemical-resistant comfortable shoes…,1
+https://airport.example.net/staff‑uniform,Airport workers need slip-resistant shoes for safety compliance…,1
+https://fitness.example.com/trainer‑gear,Personal trainers recommend versatile footwear for gym sessions…,1
+https://bakery.example.org/early‑shift,Bakers start early: comfortable shoes for 4am prep work…,1
+https://security.example.net/guard‑comfort,Security guards patrol in comfortable professional footwear…,1
+https://grocery.example.com/cashier‑tips,Grocery cashiers recommend supportive shoes for register shifts…,1
+https://mechanic.example.org/shop‑gear,Auto mechanics balance protection and comfort in work shoes…,1
+https://movie.example.net/film‑reviews,Latest blockbuster disappoints critics with predictable plot…,0
+https://crypto.example.com/market‑update,Bitcoin volatility continues as regulatory uncertainty persists…,0
+https://space.example.org/mars‑mission,NASA announces new timeline for Mars exploration program…,0
+https://stock.example.net/tech‑earnings,Tech stocks surge following better-than-expected quarterly results…,0
+https://weather.example.com/storm‑warning,Hurricane season predictions updated with latest climate data…,0
+https://politics.example.org/election‑polls,Polling data shows tight race in key swing state primaries…,0
+https://music.example.net/album‑review,Indie band's third album explores themes of isolation and hope…,0
+https://science.example.com/quantum‑research,Breakthrough in quantum computing brings practical applications closer…,0
+https://energy.example.org/solar‑efficiency,New solar panel technology achieves record efficiency ratings…,0
+https://gaming.example.net/esports‑tournament,Professional gaming tournament breaks viewership records globally…,0
+https://housing.example.com/market‑trends,Real estate market shows signs of cooling in major cities…,0
+https://transport.example.org/electric‑buses,City announces fleet of electric buses to reduce emissions…,0
+https://archaeology.example.net/ancient‑discovery,Archaeologists uncover 2000-year-old settlement in desert region…,0
+https://ocean.example.com/coral‑research,Marine biologists discover new coral species in deep waters…,0
+https://aviation.example.org/flight‑delays,Air traffic control system upgrade causes widespread delays…,0
+https://literature.example.net/book‑awards,Annual literary prize recognizes emerging voices in fiction…,0
+https://manufacturing.example.com/automation‑trends,Factory automation increases efficiency but raises job concerns…,0
+https://tourism.example.org/travel‑restrictions,International travel restrictions lifted for vaccinated tourists…,0
+https://agriculture.example.net/crop‑yields,Drought conditions affect wheat production in major growing regions…,0
+https://cybersecurity.example.com/data‑breach,Major corporation reports customer data compromise in cyberattack…,0
+https://wildlife.example.org/conservation‑success,Endangered species population shows promising recovery signs…,0
+https://economics.example.net/inflation‑report,Federal Reserve considers interest rate changes amid inflation concerns…,0
+https://medicine.example.com/treatment‑breakthrough,Clinical trial shows promising results for new cancer therapy…,0
+https://robotics.example.org/ai‑advancement,Robotics company demonstrates human-like dexterity in new model…,0
+https://food.example.net/restaurant‑closure,Michelin-starred restaurant closes after 30 years of service…,0
+https://climate.example.com/carbon‑capture,Carbon capture technology scales up for commercial deployment…,0
+https://social.example.org/platform‑changes,Social media platform introduces new privacy controls for users…,0
+https://education.example.net/funding‑cuts,School district faces budget shortfall as state funding decreases…,0
+https://streaming.example.com/content‑wars,Streaming services compete with exclusive content and pricing…,0
+https://sports.example.org/championship‑upset,Underdog team defeats defending champions in playoff surprise…,0
+https://nature.example.com/crocs‑endangered,Nile crocodiles face habitat loss as wetlands shrink due to development…,0
+https://brand.example.net/crocs‑expansion,Crocs Inc. reports quarterly growth driven by healthcare worker demand…,0
+https://documentary.example.org/crocs‑hunting,Wildlife documentary captures crocodiles hunting in African rivers…,0
+https://medical.example.com/crocs‑hospitals,Hospital staff embrace Crocs for infection control and comfort benefits…,1
+https://fashion.example.net/crocs‑runway,Paris Fashion Week features surprising Crocs collaboration with luxury brand…,1
