@@ -3,8 +3,14 @@ services:
     name: crocs-bidder
     env: python
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn src.serve:app --host 0.0.0.0 --port $PORT
+    buildCommand: |
+      pip install -r requirements.txt
+      python - <<'PY'
+from sentence_transformers import SentenceTransformer
+SentenceTransformer('sentence-transformers/paraphrase-MiniLM-L3-v2')
+print('Encoder predownloaded')
+PY
+    startCommand: uvicorn src.serve:app --host 0.0.0.0 --port $PORT --workers 1
     healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION

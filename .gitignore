@@ -132,5 +132,4 @@ dmypy.json
 .DS_Store
 
 # Model artifacts and results
-*.pkl
 *.joblib

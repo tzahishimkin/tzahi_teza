@@ -54,6 +54,20 @@ The API will be available at `http://localhost:8000` with a POST endpoint at `/s
 └── PUBLIC_URL.txt       # Deployment URL (if applicable)
 ```
 
+## Retrain after encoder change
+
+If you've changed the encoder in `src/model.py`, retrain the model:
+
+```bash
+make setup
+make retrain
+```
+
+Expected outputs:
+- `artifacts/` recreated with a fresh model (e.g., model.pkl)
+- Console prints test metrics and results summary
+- `results.json` regenerated at repo root
+
 ## API Usage
 
 ```bash

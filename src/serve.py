@@ -61,8 +61,11 @@ app.add_middleware(
 )
 
 @app.on_event("startup")
-async def startup_event():
-    """Load the trained model on startup."""
+def _startup():
+    """Load the trained model on startup and warm it up."""
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    from src.model import RelevanceModel
     global model
     
     try:
@@ -71,40 +74,40 @@ async def startup_event():
         artifacts_dir = project_root / "artifacts"
         
         if not artifacts_dir.exists():
-            logger.error(f"Artifacts directory not found: {artifacts_dir}")
-            logger.error("Please run 'python src/eval.py' to train the model first.")
+            logging.error(f"Artifacts directory not found: {artifacts_dir}")
+            logging.error("Please run 'python src/eval.py' to train the model first.")
             sys.exit(1)
         
         model_file = artifacts_dir / "model.pkl"
         if not model_file.exists():
-            logger.error(f"Model file not found: {model_file}")
-            logger.error("Please run 'python src/eval.py' to train the model first.")
+            logging.error(f"Model file not found: {model_file}")
+            logging.error("Please run 'python src/eval.py' to train the model first.")
             sys.exit(1)
         
         # Load the model
         model = RelevanceModel()
         model.load(str(artifacts_dir))
         
-        logger.info(f"✅ Model loaded successfully from {artifacts_dir}")
-        logger.info(f"   - Threshold: {model.threshold:.3f}")
-        logger.info(f"   - CPM range: ${model.min_cpm:.2f} - ${model.max_cpm:.2f}")
+        # Warm up the model
+        _ = model.predict("warmup nurses clogs waterproof")
+        
+        logging.info("Model loaded. threshold=%s min_cpm=%s max_cpm=%s",
+                     getattr(model, "threshold", None),
+                     getattr(model, "min_cpm", None),
+                     getattr(model, "max_cpm", None))
         
     except Exception as e:
-        logger.error(f"Failed to load model: {e}")
+        logging.error(f"Failed to load model: {e}")
         sys.exit(1)
 
-@app.get("/health", response_model=HealthResponse)
-async def health_check() -> HealthResponse:
-    """
-    Health check endpoint returning model status and configuration.
-    """
-    return HealthResponse(
-        ok=True,
-        model_loaded=model is not None,
-        threshold=model.threshold if model else 0.0,
-        min_cpm=model.min_cpm if model else 0.0,
-        max_cpm=model.max_cpm if model else 0.0
-    )
+@app.get("/health")
+def health():
+    """Health check endpoint returning model status and configuration."""
+    ok = model is not None
+    return {"ok": ok, "model_loaded": ok,
+            "threshold": getattr(model, "threshold", None),
+            "min_cpm": getattr(model, "min_cpm", None),
+            "max_cpm": getattr(model, "max_cpm", None)}
 
 @app.post("/score", response_model=ScoreResponse)
 async def score_snippet(request: ScoreRequest) -> ScoreResponse:

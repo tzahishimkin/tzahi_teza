@@ -54,15 +54,15 @@ class RelevanceModel:
     for relevance classification with CPM-based pricing.
     """
     
-    def __init__(self, model_name: str = 'sentence-transformers/all-MiniLM-L6-v2'):
+    def __init__(self, encoder_name: str = 'sentence-transformers/paraphrase-MiniLM-L3-v2'):
         """
         Initialize the relevance model.
         
         Args:
-            model_name: Name of the sentence transformer model to use
+            encoder_name: Name of the sentence transformer model to use
         """
-        self.model_name = model_name
-        self.encoder = SentenceTransformer(model_name)
+        self.encoder_name = encoder_name
+        self._encoder = None  # lazy init
         self.brief_embedding: Optional[np.ndarray] = None
         self.brief_text: Optional[str] = None
         self.classifier: Optional[LogisticRegression] = None
@@ -131,6 +131,18 @@ class RelevanceModel:
         """Generate a cache key for text."""
         return hashlib.md5(text.encode()).hexdigest()
     
+    def _get_encoder(self):
+        """Get the encoder, creating it lazily if needed."""
+        if self._encoder is None:
+            self._encoder = SentenceTransformer(self.encoder_name)
+        return self._encoder
+    
+    def embed(self, texts):
+        """Encode texts using sentence transformer."""
+        enc = self._get_encoder()
+        vecs = enc.encode(texts, normalize_embeddings=False)
+        return np.asarray(vecs, dtype=np.float32)
+    
     def _encode_text(self, text: str) -> np.ndarray:
         """
         Encode text using sentence transformer with caching.
@@ -147,8 +159,8 @@ class RelevanceModel:
         if cached_embedding is not None:
             return cached_embedding
         
-        # Encode text
-        embedding = self.encoder.encode([text], convert_to_numpy=True)[0]
+        # Encode text using the new embed method
+        embedding = self.embed([text])[0]
         
         # Cache the embedding
         self.embedding_cache.put(cache_key, embedding)
@@ -279,7 +291,7 @@ class RelevanceModel:
         
         # Save model components
         model_data = {
-            'model_name': self.model_name,
+            'encoder_name': self.encoder_name,
             'brief_embedding': self.brief_embedding,
             'brief_text': self.brief_text,
             'classifier': self.classifier,
@@ -304,7 +316,7 @@ class RelevanceModel:
         model_data = joblib.load(model_path)
         
         # Restore model components
-        self.model_name = model_data['model_name']
+        self.encoder_name = model_data['encoder_name']
         self.brief_embedding = model_data['brief_embedding']
         self.brief_text = model_data['brief_text']
         self.classifier = model_data['classifier']
@@ -314,8 +326,8 @@ class RelevanceModel:
         self.max_cpm = model_data['max_cpm']
         self.denylist = model_data['denylist']
         
-        # Reinitialize encoder (not saved to avoid large file sizes)
-        self.encoder = SentenceTransformer(self.model_name)
+        # Reinitialize encoder lazily (not saved to avoid large file sizes)
+        self._encoder = None
         
         print(f"Model loaded from {directory}")
     
@@ -379,6 +391,6 @@ if __name__ == "__main__":
     # Example usage
     model = RelevanceModel()
     print("RelevanceModel initialized successfully!")
-    print(f"Model encoder: {model.model_name}")
+    print(f"Model encoder: {model.encoder_name}")
     print(f"Brand safety denylist: {model.denylist}")
     print(f"Cache sizes - Embeddings: {len(model.embedding_cache.cache)}, Predictions: {len(model.prediction_cache.cache)}")

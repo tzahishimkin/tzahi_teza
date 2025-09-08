@@ -8,6 +8,7 @@ for the pages dataset. Supports train-only, eval-only, or full pipeline modes.
 import argparse
 import json
 import os
+import shutil
 import sys
 from pathlib import Path
 from typing import Dict, List, Any
@@ -39,6 +40,22 @@ class ModelEvaluator:
         # Ensure artifacts directory exists
         self.artifacts_dir.mkdir(exist_ok=True)
     
+    def _check_required_files(self) -> None:
+        """Check that all required data files exist."""
+        required_files = [
+            self.data_dir / "labeled_examples.csv",
+            self.data_dir / "test_set_1.csv", 
+            self.data_dir / "pages.csv",
+            self.data_dir / "brief.txt"
+        ]
+        
+        missing_files = [f for f in required_files if not f.exists()]
+        if missing_files:
+            self.console.print(f"[bold red]Error:[/bold red] Required files missing:")
+            for f in missing_files:
+                self.console.print(f"  - {f}")
+            sys.exit(1)
+
     def load_brief(self) -> str:
         """Load the Crocs campaign brief text."""
         brief_path = self.data_dir / "brief.txt"
@@ -48,6 +65,15 @@ class ModelEvaluator:
         with open(brief_path, 'r', encoding='utf-8') as f:
             return f.read().strip()
     
+    def clean_artifacts(self) -> None:
+        """Clean and recreate artifacts directory."""
+        if self.artifacts_dir.exists():
+            self.console.print(f"🗑️  Cleaning existing artifacts directory: {self.artifacts_dir}")
+            shutil.rmtree(self.artifacts_dir)
+        
+        self.artifacts_dir.mkdir(exist_ok=True)
+        self.console.print(f"📁 Created fresh artifacts directory: {self.artifacts_dir}")
+
     def train_model(self) -> None:
         """Train the relevance model and save to artifacts directory."""
         self.console.print(Panel("[bold blue]Training Relevance Model[/bold blue]"))
@@ -242,6 +268,7 @@ Examples:
   python eval.py                 # Full pipeline: train + eval + results
   python eval.py --train-only    # Only train the model
   python eval.py --eval-only     # Only evaluate (requires trained model)
+  python eval.py --clean         # Clean artifacts + full pipeline
         """
     )
     
@@ -257,26 +284,57 @@ Examples:
         help='Only evaluate the model (requires pre-trained model)'
     )
     
+    parser.add_argument(
+        '--clean',
+        action='store_true',
+        help='Delete and recreate artifacts directory before training'
+    )
+    
+    parser.add_argument(
+        '--all',
+        action='store_true',
+        help='Run full pipeline (same as default)'
+    )
+    
     args = parser.parse_args()
     
     # Validate arguments
     if args.train_only and args.eval_only:
         parser.error("Cannot specify both --train-only and --eval-only")
     
+    if args.eval_only and args.clean:
+        parser.error("Cannot specify both --eval-only and --clean")
+    
     # Initialize evaluator
     evaluator = ModelEvaluator()
     
     try:
+        # Check required files first
+        evaluator._check_required_files()
+        
+        # Clean artifacts if requested
+        if args.clean:
+            evaluator.clean_artifacts()
+        
         if args.train_only:
             # Train only
             evaluator.train_model()
             
         elif args.eval_only:
             # Evaluate only
-            evaluator.evaluate_model()
+            metrics = evaluator.evaluate_model()
+            
+            # Print concise summary
+            evaluator.console.print(Panel(
+                f"Test metrics: Accuracy {metrics['accuracy']:.1f}%, "
+                f"ROC AUC {metrics['roc_auc']:.1f}%, "
+                f"PR AUC {metrics['pr_auc']:.1f}%, "
+                f"F1 {metrics['f1_score']:.1f}%",
+                title="📊 Test Results"
+            ))
             
         else:
-            # Full pipeline (default)
+            # Full pipeline (default or --all)
             evaluator.console.print(Panel("[bold green]Crocs RTB Relevance System - Full Pipeline[/bold green]"))
             
             # Step 1: Train
@@ -288,13 +346,32 @@ Examples:
             # Step 3: Generate results
             evaluator.generate_results()
             
-            # Final summary
+            # Load results for summary
+            results_path = evaluator.project_root / "results.json"
+            with open(results_path, 'r') as f:
+                results = json.load(f)
+            
+            total_rows = len(results)
+            bid_count = sum(1 for r in results if r['bid'] == 1)
+            blocked_count = sum(1 for r in results if r['bid'] == 0 and r['score'] == 0.0)
+            avg_cpm = np.mean([r['price'] for r in results if r['bid'] == 1]) if bid_count > 0 else 0
+            avg_score = np.mean([r['score'] for r in results])
+            
+            bid_rate = bid_count / total_rows * 100
+            blocked_rate = blocked_count / total_rows * 100
+            
+            # Final concise summary
             evaluator.console.print(Panel(
-                f"[bold green]Pipeline completed successfully![/bold green]\n"
-                f"Model Accuracy: {metrics['accuracy']:.1f}%\n"
-                f"F1 Score: {metrics['f1_score']:.1f}%\n"
-                f"Results saved to results.json",
-                title="✅ Success"
+                f"Test metrics: Accuracy {metrics['accuracy']:.1f}%, "
+                f"ROC AUC {metrics['roc_auc']:.1f}%, "
+                f"PR AUC {metrics['pr_auc']:.1f}%, "
+                f"F1 {metrics['f1_score']:.1f}%\n"
+                f"Results summary: {total_rows} rows, "
+                f"{bid_rate:.1f}% bid rate, "
+                f"{blocked_rate:.1f}% blocked rate, "
+                f"${avg_cpm:.2f} avg CPM, "
+                f"{avg_score:.3f} avg score",
+                title="✅ Pipeline Complete"
             ))
     
     except FileNotFoundError as e:
