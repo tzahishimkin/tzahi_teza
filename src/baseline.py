@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 from typing import Optional
 from sklearn.metrics import precision_recall_curve
+from sklearn.model_selection import train_test_split
 from sentence_transformers import SentenceTransformer
 
 
@@ -30,6 +31,11 @@ class BaselineCosine:
         self.encoder = SentenceTransformer(encoder_name)
         self.brief_embedding: Optional[np.ndarray] = None
         self.threshold: float = 0.5
+    
+    def embed(self, texts):
+        """Encode texts using sentence transformer (same as RelevanceModel)."""
+        vecs = self.encoder.encode(texts, normalize_embeddings=False)
+        return np.asarray(vecs, dtype=np.float32)
     
     def _compute_cosine_similarity(self, embedding1: np.ndarray, embedding2: np.ndarray) -> float:
         """Compute cosine similarity between two embeddings."""
@@ -56,8 +62,8 @@ class BaselineCosine:
             labeled_csv: Path to training data with 'snippet' and 'label' columns
             brief_text: Crocs campaign brief text
         """
-        # Encode the brief once
-        self.brief_embedding = self.encoder.encode([brief_text], convert_to_numpy=True)[0]
+        # Encode the brief once (using same embed method as RelevanceModel)
+        self.brief_embedding = self.embed([brief_text])[0]
         
         # Load training data
         df = pd.read_csv(labeled_csv)
@@ -67,16 +73,22 @@ class BaselineCosine:
         # Compute cosine similarities for all training examples
         similarities = []
         for snippet in snippets:
-            snippet_embedding = self.encoder.encode([snippet], convert_to_numpy=True)[0]
+            snippet_embedding = self.embed([snippet])[0]
             similarity = self._compute_cosine_similarity(snippet_embedding, self.brief_embedding)
             similarities.append(similarity)
         
         similarities = np.array(similarities)
         
-        # Optimize threshold on training data
-        self.threshold = self._optimize_threshold(labels, similarities)
+        # Split train/val same as RelevanceModel (80/20, stratified, random_state=42)
+        # to avoid optimizing threshold on test data
+        similarities_train, similarities_val, y_train, y_val = train_test_split(
+            similarities, labels, test_size=0.2, random_state=42, stratify=labels
+        )
         
-        print(f"Baseline trained. Optimal threshold: {self.threshold:.3f}")
+        # Optimize threshold on validation set only
+        self.threshold = self._optimize_threshold(y_val, similarities_val)
+        
+        print(f"Baseline trained. Optimal threshold: {self.threshold:.3f} (optimized on validation set)")
     
     def predict(self, snippet: str) -> float:
         """
@@ -91,8 +103,8 @@ class BaselineCosine:
         if self.brief_embedding is None:
             raise ValueError("Model not trained. Call fit() first.")
         
-        # Encode snippet
-        snippet_embedding = self.encoder.encode([snippet], convert_to_numpy=True)[0]
+        # Encode snippet (using same embed method as RelevanceModel)
+        snippet_embedding = self.embed([snippet])[0]
         
         # Compute cosine similarity
         similarity = self._compute_cosine_similarity(snippet_embedding, self.brief_embedding)
