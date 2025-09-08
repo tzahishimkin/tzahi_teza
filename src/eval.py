@@ -25,6 +25,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, average_precision_sco
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent))
 from model import RelevanceModel
+from baseline import BaselineCosine
 
 
 class ModelEvaluator:
@@ -108,7 +109,7 @@ class ModelEvaluator:
     
     def evaluate_model(self) -> Dict[str, float]:
         """Evaluate the model on test set and return metrics."""
-        self.console.print(Panel("[bold blue]Evaluating Model Performance[/bold blue]"))
+        self.console.print(Panel("[bold blue]Evaluating Model Performance vs Baseline[/bold blue]"))
         
         # Load model if not already loaded
         if self.model is None:
@@ -125,31 +126,59 @@ class ModelEvaluator:
         df_test = pd.read_csv(test_path)
         self.console.print(f"📊 Loaded test data: {len(df_test)} examples")
         
-        # Generate predictions
+        # Train and evaluate baseline
+        self.console.print("🔄 Training baseline (cosine similarity)...")
+        baseline = BaselineCosine(encoder_name=self.model.encoder_name)
+        brief_text = self.load_brief()
+        train_path = self.data_dir / "labeled_examples.csv"
+        baseline.fit(str(train_path), brief_text)
+        
+        # Generate predictions for both models
         y_true = df_test['label'].values
-        y_scores = []
-        y_pred = []
         
-        for snippet in track(df_test['snippet'], description="Evaluating..."):
+        # Learned model predictions
+        learned_scores = []
+        learned_pred = []
+        
+        # Baseline predictions  
+        baseline_scores = []
+        baseline_pred = []
+        
+        for snippet in track(df_test['snippet'], description="Evaluating both models..."):
+            # Learned model
             result = self.model.predict(snippet)
-            y_scores.append(result['score'])
-            y_pred.append(result['bid'])
+            learned_scores.append(result['score'])
+            learned_pred.append(result['bid'])
+            
+            # Baseline model
+            score = baseline.predict(snippet)
+            baseline_scores.append(score)
+            baseline_pred.append(baseline.predict_binary(snippet))
         
-        y_scores = np.array(y_scores)
-        y_pred = np.array(y_pred)
+        learned_scores = np.array(learned_scores)
+        learned_pred = np.array(learned_pred)
+        baseline_scores = np.array(baseline_scores)
+        baseline_pred = np.array(baseline_pred)
         
-        # Calculate metrics
-        metrics = {
-            'accuracy': accuracy_score(y_true, y_pred) * 100,
-            'roc_auc': roc_auc_score(y_true, y_scores) * 100,
-            'pr_auc': average_precision_score(y_true, y_scores) * 100,
-            'f1_score': f1_score(y_true, y_pred) * 100
+        # Calculate metrics for both models
+        learned_metrics = {
+            'accuracy': accuracy_score(y_true, learned_pred) * 100,
+            'roc_auc': roc_auc_score(y_true, learned_scores) * 100,
+            'pr_auc': average_precision_score(y_true, learned_scores) * 100,
+            'f1_score': f1_score(y_true, learned_pred) * 100
         }
         
-        # Display results
-        self._display_evaluation_results(metrics, y_true, y_pred)
+        baseline_metrics = {
+            'accuracy': accuracy_score(y_true, baseline_pred) * 100,
+            'roc_auc': roc_auc_score(y_true, baseline_scores) * 100,
+            'pr_auc': average_precision_score(y_true, baseline_scores) * 100,
+            'f1_score': f1_score(y_true, baseline_pred) * 100
+        }
         
-        return metrics
+        # Display comparison results
+        self._display_comparison_results(baseline_metrics, learned_metrics, y_true, baseline_pred, learned_pred)
+        
+        return learned_metrics
     
     def _display_evaluation_results(self, metrics: Dict[str, float], y_true: np.ndarray, y_pred: np.ndarray) -> None:
         """Display evaluation results in a formatted table."""
@@ -183,6 +212,48 @@ class ModelEvaluator:
         stats_text.append(f"  False Negatives: {false_negatives}\n", style="red")
         
         self.console.print(Panel(stats_text, title="Confusion Matrix Breakdown"))
+        self.console.print()
+    
+    def _display_comparison_results(self, baseline_metrics: Dict[str, float], learned_metrics: Dict[str, float], 
+                                  y_true: np.ndarray, baseline_pred: np.ndarray, learned_pred: np.ndarray) -> None:
+        """Display baseline vs learned model comparison in a formatted table."""
+        
+        # Create comparison table
+        table = Table(title="Baseline vs Learned Model Comparison", show_header=True, header_style="bold magenta")
+        table.add_column("Metric", style="cyan", width=12)
+        table.add_column("Baseline", style="yellow", width=12, justify="right")
+        table.add_column("Learned", style="green", width=12, justify="right")
+        table.add_column("Improvement", style="blue", width=12, justify="right")
+        
+        metrics_order = ['accuracy', 'roc_auc', 'pr_auc', 'f1_score']
+        metrics_names = ['Accuracy', 'ROC AUC', 'PR AUC', 'F1 Score']
+        
+        for metric, name in zip(metrics_order, metrics_names):
+            baseline_val = baseline_metrics[metric]
+            learned_val = learned_metrics[metric]
+            improvement = learned_val - baseline_val
+            improvement_str = f"+{improvement:.1f}%" if improvement > 0 else f"{improvement:.1f}%"
+            
+            table.add_row(
+                name,
+                f"{baseline_val:.1f}%",
+                f"{learned_val:.1f}%", 
+                improvement_str
+            )
+        
+        self.console.print(table)
+        
+        # Additional statistics
+        baseline_tp = np.sum((y_true == 1) & (baseline_pred == 1))
+        baseline_fp = np.sum((y_true == 0) & (baseline_pred == 1))
+        learned_tp = np.sum((y_true == 1) & (learned_pred == 1))
+        learned_fp = np.sum((y_true == 0) & (learned_pred == 1))
+        
+        stats_text = Text()
+        stats_text.append(f"Baseline: {baseline_tp} TP, {baseline_fp} FP | ", style="yellow")
+        stats_text.append(f"Learned: {learned_tp} TP, {learned_fp} FP", style="green")
+        
+        self.console.print(Panel(stats_text, title="True/False Positives"))
         self.console.print()
     
     def generate_results(self) -> None:
