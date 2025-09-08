@@ -2,6 +2,10 @@
 
 A real-time bidding (RTB) relevance system for Crocs campaigns. The system analyzes URL snippets against Crocs creative briefs to make bid/no-bid decisions with relevance-based CPM pricing.
 
+## Architecture
+
+![RTB System Architecture](diagram.png)
+
 ## Features
 
 - Sub-100ms latency
@@ -60,8 +64,10 @@ The notebook generates ROC curves, PR curves, and performance comparison charts 
 │   └── serve.py          # FastAPI application
 ├── data/                 # Training and test datasets
 ├── artifacts/            # Trained models and generated charts
+├── tools/                # Utility scripts (diagram generation)
 ├── requirements.txt      # Python dependencies
 ├── report.ipynb          # Model evaluation notebook with charts
+├── diagram.png          # System architecture diagram
 ├── Makefile             # Build automation
 ├── render.yaml          # Render deployment config
 ├── results.json         # Model evaluation results (generated)
