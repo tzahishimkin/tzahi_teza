@@ -2,116 +2,116 @@
   {
     "url": "https://news.example.com/style1",
     "bid": 1,
-    "price": 2.9802627434487414,
-    "score": 0.9921050973794966
+    "price": 2.9802627507208648,
+    "score": 0.9921051002883459
   },
   {
     "url": "https://fashion.example.com/crocs-nurses",
     "bid": 1,
-    "price": 2.997675566057271,
-    "score": 0.9990702264229084
+    "price": 2.997675569133933,
+    "score": 0.9990702276535731
   },
   {
     "url": "https://tech.example.org/review42",
     "bid": 0,
     "price": 0.0,
-    "score": 0.004191540904302474
+    "score": 0.004191542718003368
   },
   {
     "url": "https://food.example.net/chefblog",
     "bid": 1,
-    "price": 2.987579882254864,
-    "score": 0.9950319529019457
+    "price": 2.9875798858118072,
+    "score": 0.9950319543247229
   },
   {
     "url": "https://travel.example.com/top‑hikes",
     "bid": 0,
     "price": 0.0,
-    "score": 0.004446772412841704
+    "score": 0.004446767953664526
   },
   {
     "url": "https://worklife.example.io/ergonomics",
     "bid": 1,
-    "price": 1.290971486535211,
-    "score": 0.3163885946140845
+    "price": 1.290972657796755,
+    "score": 0.316389063118702
   },
   {
     "url": "https://sports.example.com/running‑tips",
     "bid": 0,
     "price": 0.0,
-    "score": 0.003749452439738125
+    "score": 0.00374945225101544
   },
   {
     "url": "https://fashion.example.org/fall‑footwear",
     "bid": 1,
-    "price": 2.991395833136438,
-    "score": 0.9965583332545752
+    "price": 2.9913958299687935,
+    "score": 0.9965583319875174
   },
   {
     "url": "https://finance.example.net/retirement‑401k",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0006781073285162912
+    "score": 0.0006781080413031413
   },
   {
     "url": "https://health.example.com/mental‑wellness",
     "bid": 1,
-    "price": 2.9806924685264957,
-    "score": 0.9922769874105982
+    "price": 2.980692472860149,
+    "score": 0.9922769891440597
   },
   {
     "url": "https://gaming.example.io/review‑sandbox",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0033792650928029253
+    "score": 0.003379266253663685
   },
   {
     "url": "https://hospitality.example.com/kitchen‑gear",
     "bid": 1,
-    "price": 2.9989887115024074,
-    "score": 0.999595484600963
+    "price": 2.9989887117156013,
+    "score": 0.9995954846862405
   },
   {
     "url": "https://design.example.org/creative‑spaces",
     "bid": 1,
-    "price": 2.988856137663823,
-    "score": 0.9955424550655293
+    "price": 2.9888561573800203,
+    "score": 0.9955424629520082
   },
   {
     "url": "https://edu.example.edu/campus‑fashion",
     "bid": 1,
-    "price": 2.9096648808238554,
-    "score": 0.9638659523295422
+    "price": 2.909664835068063,
+    "score": 0.9638659340272251
   },
   {
     "url": "https://auto.example.net/electric‑car",
     "bid": 0,
     "price": 0.0,
-    "score": 0.00012023072793475095
+    "score": 0.00012023080790885582
   },
   {
     "url": "https://style.example.com/rainy‑day‑shoes",
     "bid": 1,
-    "price": 2.991673487217575,
-    "score": 0.99666939488703
+    "price": 2.991673482867578,
+    "score": 0.9966693931470312
   },
   {
     "url": "https://tech.example.org/gadget‑news",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0015370472805219498
+    "score": 0.0015370502391034032
   },
   {
     "url": "https://health.example.com/ortho‑footwear",
     "bid": 1,
-    "price": 2.9990498301760375,
-    "score": 0.9996199320704151
+    "price": 2.9990498306485027,
+    "score": 0.9996199322594012
   },
   {
     "url": "https://lifestyle.example.org/gardening‑tips",
     "bid": 1,
-    "price": 2.998708812534132,
-    "score": 0.9994835250136528
+    "price": 2.998708814851876,
+    "score": 0.9994835259407504
   },
   {
     "url": "https://finance.example.com/crypto‑basics",
@@ -122,32 +122,32 @@
   {
     "url": "https://travel.example.org/packing‑light",
     "bid": 1,
-    "price": 2.9865946315103167,
-    "score": 0.9946378526041267
+    "price": 2.986594630100341,
+    "score": 0.9946378520401364
   },
   {
     "url": "https://sports.example.net/climbing‑gear",
     "bid": 1,
-    "price": 1.88805506392462,
-    "score": 0.555222025569848
+    "price": 1.8880543322910235,
+    "score": 0.5552217329164094
   },
   {
     "url": "https://careers.example.com/office‑dress‑code",
     "bid": 1,
-    "price": 2.9377848402297793,
-    "score": 0.9751139360919118
+    "price": 2.9377848779069557,
+    "score": 0.9751139511627823
   },
   {
     "url": "https://fashion.example.org/jibbitz‑custom",
     "bid": 0,
     "price": 0.0,
-    "score": 0.18974552095653166
+    "score": 0.18974536792880414
   },
   {
     "url": "https://tech.example.com/ai‑tutorial",
     "bid": 0,
     "price": 0.0,
-    "score": 0.007421621828044997
+    "score": 0.007421621541977092
   },
   {
     "url": "https://wildlife.example.net/crocs‑australia",
@@ -158,122 +158,122 @@
   {
     "url": "https://outdoor.example.com/hiking‑prep",
     "bid": 1,
-    "price": 2.99777389596867,
-    "score": 0.999109558387468
+    "price": 2.997773894489806,
+    "score": 0.9991095577959224
   },
   {
     "url": "https://medical.example.org/nurse‑wellness",
     "bid": 1,
-    "price": 2.9902060784051416,
-    "score": 0.9960824313620567
+    "price": 2.9902060851447883,
+    "score": 0.9960824340579153
   },
   {
     "url": "https://culinary.example.net/kitchen‑safety",
     "bid": 1,
-    "price": 2.9968748430146688,
-    "score": 0.9987499372058676
+    "price": 2.9968748405299945,
+    "score": 0.9987499362119978
   },
   {
     "url": "https://workspace.example.com/standing‑desk",
     "bid": 1,
-    "price": 2.9986118363440517,
-    "score": 0.9994447345376206
+    "price": 2.998611839501956,
+    "score": 0.9994447358007824
   },
   {
     "url": "https://retail.example.org/customer‑service",
     "bid": 1,
-    "price": 2.997458914679329,
-    "score": 0.9989835658717316
+    "price": 2.9974589178011977,
+    "score": 0.998983567120479
   },
   {
     "url": "https://gardening.example.io/muddy‑season",
     "bid": 1,
-    "price": 2.006182653191619,
-    "score": 0.6024730612766476
+    "price": 2.0061820806972412,
+    "score": 0.6024728322788965
   },
   {
     "url": "https://college.example.edu/dorm‑essentials",
     "bid": 1,
-    "price": 2.9970906088936977,
-    "score": 0.998836243557479
+    "price": 2.9970906117226406,
+    "score": 0.9988362446890563
   },
   {
     "url": "https://wellness.example.com/workplace‑comfort",
     "bid": 1,
-    "price": 2.990026572434335,
-    "score": 0.9960106289737339
+    "price": 2.990026571878929,
+    "score": 0.9960106287515716
   },
   {
     "url": "https://fashion.example.net/comfort‑style",
     "bid": 1,
-    "price": 2.9995163766140633,
-    "score": 0.9998065506456254
+    "price": 2.9995163768606328,
+    "score": 0.9998065507442532
   },
   {
     "url": "https://hospitality.example.org/staff‑uniform",
     "bid": 1,
-    "price": 2.998083360526819,
-    "score": 0.9992333442107276
+    "price": 2.9980833621163256,
+    "score": 0.9992333448465303
   },
   {
     "url": "https://daycare.example.com/teacher‑gear",
     "bid": 1,
-    "price": 2.9997127466469427,
-    "score": 0.9998850986587771
+    "price": 2.9997127483139976,
+    "score": 0.9998850993255991
   },
   {
     "url": "https://art.example.org/studio‑setup",
     "bid": 1,
-    "price": 2.9977487833621774,
-    "score": 0.999099513344871
+    "price": 2.997748785727838,
+    "score": 0.9990995142911352
   },
   {
     "url": "https://vet.example.net/clinic‑wear",
     "bid": 1,
-    "price": 2.975143102621201,
-    "score": 0.9900572410484804
+    "price": 2.975143129497908,
+    "score": 0.9900572517991632
   },
   {
     "url": "https://elderly.example.com/comfort‑shoes",
     "bid": 1,
-    "price": 2.9985481692720537,
-    "score": 0.9994192677088215
+    "price": 2.9985481714004614,
+    "score": 0.9994192685601845
   },
   {
     "url": "https://kids.example.org/playground‑safety",
     "bid": 1,
-    "price": 2.991300720358452,
-    "score": 0.9965202881433807
+    "price": 2.9913007195454187,
+    "score": 0.9965202878181674
   },
   {
     "url": "https://therapy.example.net/physical‑comfort",
     "bid": 1,
-    "price": 2.9986603935481493,
-    "score": 0.9994641574192598
+    "price": 2.9986603937569605,
+    "score": 0.9994641575027842
   },
   {
     "url": "https://cleaning.example.com/janitorial‑gear",
     "bid": 1,
-    "price": 2.999439257378734,
-    "score": 0.9997757029514935
+    "price": 2.999439258568075,
+    "score": 0.99977570342723
   },
   {
     "url": "https://pharmacy.example.org/staff‑comfort",
     "bid": 1,
-    "price": 2.996782214168748,
-    "score": 0.9987128856674993
+    "price": 2.996782218626374,
+    "score": 0.9987128874505495
   },
   {
     "url": "https://library.example.edu/worker‑wellness",
     "bid": 1,
-    "price": 2.9998405741656344,
-    "score": 0.9999362296662537
+    "price": 2.999840574635768,
+    "score": 0.9999362298543073
   },
   {
     "url": "https://dental.example.net/practice‑gear",
     "bid": 1,
-    "price": 2.9993162329152923,
-    "score": 0.999726493166117
+    "price": 2.9993162345828197,
+    "score": 0.9997264938331278
   },
   {
     "url": "https://warehouse.example.com/safety‑first",
@@ -284,68 +284,68 @@
   {
     "url": "https://food.example.org/service‑industry",
     "bid": 1,
-    "price": 2.9937061164325374,
-    "score": 0.9974824465730149
+    "price": 2.9937061275986694,
+    "score": 0.9974824510394678
   },
   {
     "url": "https://camp.example.net/counselor‑prep",
     "bid": 1,
-    "price": 2.9979545453919085,
-    "score": 0.9991818181567634
+    "price": 2.997954543924068,
+    "score": 0.9991818175696272
   },
   {
     "url": "https://salon.example.com/stylist‑comfort",
     "bid": 1,
-    "price": 2.9939052173943472,
-    "score": 0.997562086957739
+    "price": 2.9939052260939922,
+    "score": 0.9975620904375968
   },
   {
     "url": "https://lab.example.org/research‑safety",
     "bid": 1,
-    "price": 2.999814371552528,
-    "score": 0.9999257486210111
+    "price": 2.999814372693062,
+    "score": 0.9999257490772249
   },
   {
     "url": "https://airport.example.net/staff‑uniform",
     "bid": 1,
-    "price": 2.9962338233055696,
-    "score": 0.9984935293222279
+    "price": 2.996233827378409,
+    "score": 0.9984935309513636
   },
   {
     "url": "https://fitness.example.com/trainer‑gear",
     "bid": 1,
-    "price": 2.999697756134471,
-    "score": 0.9998791024537883
+    "price": 2.9996977566378558,
+    "score": 0.9998791026551423
   },
   {
     "url": "https://bakery.example.org/early‑shift",
     "bid": 1,
-    "price": 2.9966844941052466,
-    "score": 0.9986737976420987
+    "price": 2.9966844979869514,
+    "score": 0.9986737991947806
   },
   {
     "url": "https://security.example.net/guard‑comfort",
     "bid": 1,
-    "price": 2.9985140917136683,
-    "score": 0.9994056366854673
+    "price": 2.9985140941355164,
+    "score": 0.9994056376542065
   },
   {
     "url": "https://grocery.example.com/cashier‑tips",
     "bid": 1,
-    "price": 2.9957128453087143,
-    "score": 0.9982851381234857
+    "price": 2.995712850640859,
+    "score": 0.9982851402563435
   },
   {
     "url": "https://mechanic.example.org/shop‑gear",
     "bid": 1,
-    "price": 2.9987976419898685,
-    "score": 0.9995190567959474
+    "price": 2.9987976436815957,
+    "score": 0.9995190574726383
   },
   {
     "url": "https://movie.example.net/film‑reviews",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0018345466715689255
+    "score": 0.0018345489057161359
   },
   {
     "url": "https://crypto.example.com/market‑update",
@@ -357,103 +357,103 @@
     "url": "https://space.example.org/mars‑mission",
     "bid": 0,
     "price": 0.0,
-    "score": 0.00020169970767010208
+    "score": 0.00020169979260502372
   },
   {
     "url": "https://stock.example.net/tech‑earnings",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0019948552469237204
+    "score": 0.0019948576962603303
   },
   {
     "url": "https://weather.example.com/storm‑warning",
     "bid": 0,
     "price": 0.0,
-    "score": 0.000537504051844157
+    "score": 0.0005375037936359407
   },
   {
     "url": "https://politics.example.org/election‑polls",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0035946583981702504
+    "score": 0.0035946561078499494
   },
   {
     "url": "https://music.example.net/album‑review",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0041128972893092605
+    "score": 0.0041128969857242275
   },
   {
     "url": "https://science.example.com/quantum‑research",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0008259926208314937
+    "score": 0.0008259936316985271
   },
   {
     "url": "https://energy.example.org/solar‑efficiency",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0004777590196857996
+    "score": 0.00047775876897397494
   },
   {
     "url": "https://gaming.example.net/esports‑tournament",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0003137606270748392
+    "score": 0.000313761055036698
   },
   {
     "url": "https://housing.example.com/market‑trends",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0010164739803622776
+    "score": 0.001016476607344295
   },
   {
     "url": "https://transport.example.org/electric‑buses",
     "bid": 0,
     "price": 0.0,
-    "score": 0.006449898261745984
+    "score": 0.006449913149733416
   },
   {
     "url": "https://archaeology.example.net/ancient‑discovery",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0006982323639989807
+    "score": 0.0006982325697921842
   },
   {
     "url": "https://ocean.example.com/coral‑research",
     "bid": 0,
     "price": 0.0,
-    "score": 0.003668531400629226
+    "score": 0.00366853852638422
   },
   {
     "url": "https://aviation.example.org/flight‑delays",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0004214818868094582
+    "score": 0.0004214822770103218
   },
   {
     "url": "https://literature.example.net/book‑awards",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0006522003589441297
+    "score": 0.0006522007020849544
   },
   {
     "url": "https://manufacturing.example.com/automation‑trends",
     "bid": 0,
     "price": 0.0,
-    "score": 0.001349445094126968
+    "score": 0.0013494500284839765
   },
   {
     "url": "https://tourism.example.org/travel‑restrictions",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0016597234657635966
+    "score": 0.001659723429439745
   },
   {
     "url": "https://agriculture.example.net/crop‑yields",
     "bid": 0,
     "price": 0.0,
-    "score": 0.00030633521128221885
+    "score": 0.0003063351402863303
   },
   {
     "url": "https://cybersecurity.example.com/data‑breach",
@@ -465,139 +465,139 @@
     "url": "https://wildlife.example.org/conservation‑success",
     "bid": 0,
     "price": 0.0,
-    "score": 0.00036763507604954427
+    "score": 0.0003676351130706402
   },
   {
     "url": "https://economics.example.net/inflation‑report",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0006227842254030682
+    "score": 0.0006227851582537469
   },
   {
     "url": "https://medicine.example.com/treatment‑breakthrough",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0012271338746471833
+    "score": 0.0012271362761379439
   },
   {
     "url": "https://robotics.example.org/ai‑advancement",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0063291267388112795
+    "score": 0.006329142808038657
   },
   {
     "url": "https://food.example.net/restaurant‑closure",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0033384726079320015
+    "score": 0.003338475771824031
   },
   {
     "url": "https://climate.example.com/carbon‑capture",
     "bid": 0,
     "price": 0.0,
-    "score": 0.004615331688756265
+    "score": 0.004615339439958669
   },
   {
     "url": "https://social.example.org/platform‑changes",
     "bid": 0,
     "price": 0.0,
-    "score": 0.003430928452075978
+    "score": 0.0034309313710898406
   },
   {
     "url": "https://education.example.net/funding‑cuts",
     "bid": 0,
     "price": 0.0,
-    "score": 0.003706671546834998
+    "score": 0.0037066749566654696
   },
   {
     "url": "https://streaming.example.com/content‑wars",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0015577794021459181
+    "score": 0.0015577804458265757
   },
   {
     "url": "https://sports.example.org/championship‑upset",
     "bid": 0,
     "price": 0.0,
-    "score": 0.013952113679572341
+    "score": 0.013952133394992638
   },
   {
     "url": "https://construction.example.com/safety‑boots",
     "bid": 1,
-    "price": 2.9919208512998114,
-    "score": 0.9967683405199246
+    "price": 2.9919208368944408,
+    "score": 0.9967683347577764
   },
   {
     "url": "https://restaurant.example.net/kitchen‑staff",
     "bid": 1,
-    "price": 2.9917126545932633,
-    "score": 0.9966850618373053
+    "price": 2.991712650152772,
+    "score": 0.9966850600611088
   },
   {
     "url": "https://hospital.example.org/patient‑care",
     "bid": 1,
-    "price": 2.999830177675767,
-    "score": 0.9999320710703069
+    "price": 2.999830177835428,
+    "score": 0.9999320711341712
   },
   {
     "url": "https://office.example.com/remote‑work",
     "bid": 1,
-    "price": 2.4911544269273955,
-    "score": 0.7964617707709583
+    "price": 2.4911544574144537,
+    "score": 0.7964617829657814
   },
   {
     "url": "https://factory.example.net/assembly‑line",
     "bid": 1,
-    "price": 2.9870941637011077,
-    "score": 0.9948376654804432
+    "price": 2.9870941610272608,
+    "score": 0.9948376644109044
   },
   {
     "url": "https://school.example.org/teacher‑resources",
     "bid": 1,
-    "price": 2.949694357078155,
-    "score": 0.979877742831262
+    "price": 2.949694353754616,
+    "score": 0.9798777415018464
   },
   {
     "url": "https://clinic.example.com/medical‑staff",
     "bid": 1,
-    "price": 2.9933218632749217,
-    "score": 0.9973287453099686
+    "price": 2.993321879020237,
+    "score": 0.9973287516080948
   },
   {
     "url": "https://hotel.example.net/housekeeping",
     "bid": 1,
-    "price": 2.9998944297109644,
-    "score": 0.9999577718843857
+    "price": 2.999894429904716,
+    "score": 0.9999577719618865
   },
   {
     "url": "https://mall.example.org/retail‑training",
     "bid": 1,
-    "price": 2.9952932368348164,
-    "score": 0.9981172947339265
+    "price": 2.995293241637751,
+    "score": 0.9981172966551003
   },
   {
     "url": "https://spa.example.com/therapist‑wellness",
     "bid": 1,
-    "price": 2.9969931723922314,
-    "score": 0.9987972689568926
+    "price": 2.99699317328461,
+    "score": 0.998797269313844
   },
   {
     "url": "https://gym.example.net/personal‑training",
     "bid": 1,
-    "price": 2.998042001145297,
-    "score": 0.9992168004581188
+    "price": 2.9980420042690983,
+    "score": 0.9992168017076393
   },
   {
     "url": "https://cafe.example.org/barista‑life",
     "bid": 1,
-    "price": 2.9953597219132977,
-    "score": 0.998143888765319
+    "price": 2.9953597194547132,
+    "score": 0.9981438877818852
   },
   {
     "url": "https://workshop.example.com/crafting‑space",
     "bid": 1,
-    "price": 2.989200791823853,
-    "score": 0.9956803167295413
+    "price": 2.989200798527727,
+    "score": 0.9956803194110908
   },
   {
     "url": "https://studio.example.net/photography",
@@ -608,38 +608,38 @@
   {
     "url": "https://startup.example.org/office‑culture",
     "bid": 1,
-    "price": 2.9906675324949266,
-    "score": 0.9962670129979706
+    "price": 2.990667539697969,
+    "score": 0.9962670158791878
   },
   {
     "url": "https://nonprofit.example.com/volunteer‑prep",
     "bid": 1,
-    "price": 2.9635179765106967,
-    "score": 0.9854071906042786
+    "price": 2.9635180765173557,
+    "score": 0.9854072306069422
   },
   {
     "url": "https://theatre.example.net/backstage",
     "bid": 1,
-    "price": 2.9971021865902494,
-    "score": 0.9988408746360998
+    "price": 2.9971021928119788,
+    "score": 0.9988408771247915
   },
   {
     "url": "https://laboratory.example.org/research‑environment",
     "bid": 1,
-    "price": 2.9939225733596064,
-    "score": 0.9975690293438426
+    "price": 2.993922578989701,
+    "score": 0.9975690315958804
   },
   {
     "url": "https://emergency.example.com/first‑responder",
     "bid": 1,
-    "price": 2.873645114562496,
-    "score": 0.9494580458249985
+    "price": 2.873645173838953,
+    "score": 0.9494580695355811
   },
   {
     "url": "https://maintenance.example.net/facility‑care",
     "bid": 1,
-    "price": 2.668965308858519,
-    "score": 0.8675861235434076
+    "price": 2.6689652546352214,
+    "score": 0.8675861018540885
   },
   {
     "url": "https://logistics.example.org/warehouse‑ops",
@@ -650,206 +650,206 @@
   {
     "url": "https://airline.example.com/cabin‑crew",
     "bid": 1,
-    "price": 2.9973597595304735,
-    "score": 0.9989439038121893
+    "price": 2.9973597682027195,
+    "score": 0.9989439072810878
   },
   {
     "url": "https://delivery.example.net/driver‑wellness",
     "bid": 1,
-    "price": 2.9830847128550184,
-    "score": 0.9932338851420074
+    "price": 2.983084695971936,
+    "score": 0.9932338783887743
   },
   {
     "url": "https://consulting.example.org/travel‑gear",
     "bid": 1,
-    "price": 2.957191807678719,
-    "score": 0.9828767230714875
+    "price": 2.9571919481322397,
+    "score": 0.9828767792528958
   },
   {
     "url": "https://childcare.example.com/daycare‑life",
     "bid": 1,
-    "price": 2.9993733671233116,
-    "score": 0.9997493468493246
+    "price": 2.9993733682692927,
+    "score": 0.999749347307717
   },
   {
     "url": "https://elder.example.net/care‑assistant",
     "bid": 1,
-    "price": 2.9987899422832536,
-    "score": 0.9995159769133015
+    "price": 2.998789943138863,
+    "score": 0.9995159772555452
   },
   {
     "url": "https://marine.example.org/boat‑life",
     "bid": 1,
-    "price": 2.8838294423449873,
-    "score": 0.953531776937995
+    "price": 2.8838296372727545,
+    "score": 0.9535318549091018
   },
   {
     "url": "https://agriculture.example.com/farm‑work",
     "bid": 1,
-    "price": 2.1137782610876648,
-    "score": 0.6455113044350659
+    "price": 2.113777546833938,
+    "score": 0.6455110187335751
   },
   {
     "url": "https://events.example.net/coordinator‑gear",
     "bid": 1,
-    "price": 2.999585476442222,
-    "score": 0.9998341905768887
+    "price": 2.9995854766578947,
+    "score": 0.9998341906631579
   },
   {
     "url": "https://broadcasting.example.org/studio‑life",
     "bid": 1,
-    "price": 2.637285801703214,
-    "score": 0.8549143206812856
+    "price": 2.6372861789267357,
+    "score": 0.8549144715706942
   },
   {
     "url": "https://automotive.example.com/repair‑shop",
     "bid": 1,
-    "price": 2.9847682097280823,
-    "score": 0.993907283891233
+    "price": 2.9847682432392544,
+    "score": 0.9939072972957017
   },
   {
     "url": "https://jewelry.example.net/craftsman‑tools",
     "bid": 1,
-    "price": 2.997598825425069,
-    "score": 0.9990395301700277
+    "price": 2.997598830350143,
+    "score": 0.9990395321400571
   },
   {
     "url": "https://landscaping.example.org/crew‑gear",
     "bid": 1,
-    "price": 2.7428284716739495,
-    "score": 0.8971313886695799
+    "price": 2.742828513817328,
+    "score": 0.8971314055269313
   },
   {
     "url": "https://insurance.example.com/claims‑adjuster",
     "bid": 1,
-    "price": 2.990456860436096,
-    "score": 0.9961827441744384
+    "price": 2.9904568735960977,
+    "score": 0.9961827494384391
   },
   {
     "url": "https://printing.example.net/press‑operator",
     "bid": 0,
     "price": 0.0,
-    "score": 0.1346006870928206
+    "score": 0.13460097583473885
   },
   {
     "url": "https://postal.example.org/mail‑carrier",
     "bid": 1,
-    "price": 2.9695893860034084,
-    "score": 0.9878357544013633
+    "price": 2.9695893415350403,
+    "score": 0.9878357366140161
   },
   {
     "url": "https://telecommunications.example.com/field‑tech",
     "bid": 1,
-    "price": 2.914223897697376,
-    "score": 0.9656895590789505
+    "price": 2.914223858087809,
+    "score": 0.9656895432351236
   },
   {
     "url": "https://banking.example.net/teller‑wellness",
     "bid": 1,
-    "price": 2.955692783321854,
-    "score": 0.9822771133287416
+    "price": 2.9556928263889013,
+    "score": 0.9822771305555604
   },
   {
     "url": "https://archaeology.example.org/field‑work",
     "bid": 1,
-    "price": 2.415175446346451,
-    "score": 0.7660701785385803
+    "price": 2.4151757230004773,
+    "score": 0.7660702892001909
   },
   {
     "url": "https://veterinary.example.com/animal‑clinic",
     "bid": 1,
-    "price": 2.998390760602508,
-    "score": 0.9993563042410033
+    "price": 2.998390764729619,
+    "score": 0.9993563058918475
   },
   {
     "url": "https://corporate.example.net/boardroom",
     "bid": 1,
-    "price": 2.833330431002791,
-    "score": 0.9333321724011163
+    "price": 2.833330711083747,
+    "score": 0.9333322844334988
   },
   {
     "url": "https://social‑work.example.org/community",
     "bid": 1,
-    "price": 2.9983868629018873,
-    "score": 0.9993547451607548
+    "price": 2.998386867371634,
+    "score": 0.9993547469486537
   },
   {
     "url": "https://catering.example.com/event‑service",
     "bid": 1,
-    "price": 2.9999379453342745,
-    "score": 0.9999751781337097
+    "price": 2.999937945326865,
+    "score": 0.999975178130746
   },
   {
     "url": "https://research.example.net/field‑study",
     "bid": 1,
-    "price": 2.962482367777578,
-    "score": 0.9849929471110311
+    "price": 2.9624823609106468,
+    "score": 0.9849929443642587
   },
   {
     "url": "https://entertainment.example.org/venue‑staff",
     "bid": 1,
-    "price": 2.9483205629697444,
-    "score": 0.9793282251878979
+    "price": 2.948320563022023,
+    "score": 0.9793282252088092
   },
   {
     "url": "https://translation.example.com/conference",
     "bid": 1,
-    "price": 2.9988235184574443,
-    "score": 0.9995294073829778
+    "price": 2.998823518363332,
+    "score": 0.9995294073453328
   },
   {
     "url": "https://real‑estate.example.net/property‑tours",
     "bid": 1,
-    "price": 2.6813892869499827,
-    "score": 0.872555714779993
+    "price": 2.6813896060299336,
+    "score": 0.8725558424119735
   },
   {
     "url": "https://fashion.example.org/design‑studio",
     "bid": 1,
-    "price": 2.9780827956398745,
-    "score": 0.9912331182559498
+    "price": 2.9780828493730995,
+    "score": 0.9912331397492399
   },
   {
     "url": "https://journalism.example.com/field‑reporting",
     "bid": 1,
-    "price": 1.920807160667413,
-    "score": 0.5683228642669652
+    "price": 1.9208057178142828,
+    "score": 0.5683222871257131
   },
   {
     "url": "https://psychology.example.net/therapy‑practice",
     "bid": 1,
-    "price": 2.9582449823915304,
-    "score": 0.9832979929566122
+    "price": 2.9582450339480215,
+    "score": 0.9832980135792087
   },
   {
     "url": "https://architecture.example.org/site‑visits",
     "bid": 1,
-    "price": 2.9985638999843776,
-    "score": 0.999425559993751
+    "price": 2.9985639012117886,
+    "score": 0.9994255604847155
   },
   {
     "url": "https://marketing.example.com/trade‑shows",
     "bid": 1,
-    "price": 1.6849597880187075,
-    "score": 0.473983915207483
+    "price": 1.684960958342983,
+    "score": 0.4739843833371932
   },
   {
     "url": "https://culinary.example.net/chef‑training",
     "bid": 1,
-    "price": 2.758835209047627,
-    "score": 0.9035340836190509
+    "price": 2.758835487492979,
+    "score": 0.9035341949971916
   },
   {
     "url": "https://legal.example.org/court‑prep",
     "bid": 1,
-    "price": 2.5428305698856475,
-    "score": 0.817132227954259
+    "price": 2.542831450311829,
+    "score": 0.8171325801247316
   },
   {
     "url": "https://environmental.example.com/field‑sampling",
     "bid": 1,
-    "price": 2.9787401592487344,
-    "score": 0.9914960636994937
+    "price": 2.9787401412729575,
+    "score": 0.991496056509183
   },
   {
     "url": "https://software.example.net/developer‑wellness",
@@ -860,20 +860,20 @@
   {
     "url": "https://recruiting.example.org/campus‑visits",
     "bid": 1,
-    "price": 2.9937322737137473,
-    "score": 0.9974929094854988
+    "price": 2.9937322774335793,
+    "score": 0.9974929109734317
   },
   {
     "url": "https://security.example.com/patrol‑duty",
     "bid": 1,
-    "price": 2.9193160984490785,
-    "score": 0.9677264393796314
+    "price": 2.9193161701349055,
+    "score": 0.9677264680539622
   },
   {
     "url": "https://inspection.example.net/quality‑control",
     "bid": 1,
-    "price": 2.9982179567231206,
-    "score": 0.9992871826892483
+    "price": 2.9982179597310465,
+    "score": 0.9992871838924187
   },
   {
     "url": "https://logistics.example.org/supply‑chain",
@@ -884,32 +884,32 @@
   {
     "url": "https://telehealth.example.com/nurse‑practitioner",
     "bid": 1,
-    "price": 2.9963203613715232,
-    "score": 0.9985281445486093
+    "price": 2.996320371392616,
+    "score": 0.9985281485570465
   },
   {
     "url": "https://installation.example.net/tech‑service",
     "bid": 1,
-    "price": 2.633166954884759,
-    "score": 0.8532667819539036
+    "price": 2.6331672791884206,
+    "score": 0.8532669116753683
   },
   {
     "url": "https://customer‑service.example.org/call‑center",
     "bid": 1,
-    "price": 2.751358121351611,
-    "score": 0.9005432485406444
+    "price": 2.7513585984121702,
+    "score": 0.9005434393648681
   },
   {
     "url": "https://training.example.com/corporate‑wellness",
     "bid": 1,
-    "price": 2.9989100924623884,
-    "score": 0.9995640369849553
+    "price": 2.9989100937742643,
+    "score": 0.9995640375097058
   },
   {
     "url": "https://maintenance.example.net/building‑services",
     "bid": 1,
-    "price": 2.734525538728522,
-    "score": 0.8938102154914087
+    "price": 2.7345255828165453,
+    "score": 0.8938102331266181
   },
   {
     "url": "https://inventory.example.org/stock‑management",
@@ -921,30 +921,30 @@
     "url": "https://nature.example.com/crocs‑endangered",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0015535939592531292
+    "score": 0.001553594776524097
   },
   {
     "url": "https://brand.example.net/crocs‑expansion",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0044760441619309185
+    "score": 0.004476049385097732
   },
   {
     "url": "https://documentary.example.org/crocs‑hunting",
     "bid": 0,
     "price": 0.0,
-    "score": 0.0011255280712817385
+    "score": 0.001125529033786277
   },
   {
     "url": "https://medical.example.com/crocs‑hospitals",
     "bid": 1,
-    "price": 2.99568273668145,
-    "score": 0.99827309467258
+    "price": 2.995682735662266,
+    "score": 0.9982730942649064
   },
   {
     "url": "https://fashion.example.net/crocs‑runway",
     "bid": 1,
-    "price": 2.8151701386243078,
-    "score": 0.926068055449723
+    "price": 2.815170068907935,
+    "score": 0.9260680275631741
   }
 ]

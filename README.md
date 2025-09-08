@@ -39,6 +39,15 @@ uvicorn src.serve:app --host 0.0.0.0 --port 8000
 
 The API will be available at `http://localhost:8000` with a POST endpoint at `/score`.
 
+### 4. View Model Evaluation Report
+
+Run the Jupyter notebook to see detailed model comparison charts:
+
+```bash
+jupyter notebook report.ipynb
+```
+
+The notebook generates ROC curves, PR curves, and performance comparison charts saved to `artifacts/`.
 
 ## Project Structure
 
@@ -46,13 +55,17 @@ The API will be available at `http://localhost:8000` with a POST endpoint at `/s
 .
 ├── src/
 │   ├── model.py          # RelevanceModel class
+│   ├── baseline.py       # Baseline cosine similarity model
 │   ├── eval.py           # Training and evaluation script
 │   └── serve.py          # FastAPI application
+├── data/                 # Training and test datasets
+├── artifacts/            # Trained models and generated charts
 ├── requirements.txt      # Python dependencies
-├── .gitignore           # Git ignore patterns
-├── README.md            # This file
+├── report.ipynb          # Model evaluation notebook with charts
+├── Makefile             # Build automation
+├── render.yaml          # Render deployment config
 ├── results.json         # Model evaluation results (generated)
-└── PUBLIC_URL.txt       # Deployment URL (if applicable)
+└── README.md            # This file
 ```
 
 ## Retrain after encoder change
