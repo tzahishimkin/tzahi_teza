@@ -2,9 +2,6 @@
 
 A real-time bidding (RTB) relevance system for Crocs campaigns. The system analyzes URL snippets against Crocs creative briefs to make bid/no-bid decisions with relevance-based CPM pricing.
 
-## Architecture
-
-![RTB System Architecture](diagram.png)
 
 ## Features
 
