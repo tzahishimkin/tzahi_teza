@@ -133,3 +133,5 @@ dmypy.json
 
 # Model artifacts and results
 *.joblib
+.venv/
+venv/
